@@ -7,7 +7,7 @@ You can use `nwjs` as an nw.js version manager, and do things like `nw /your/app
 # Install
 
 ```bash
-npm i -g nwjs
+npm i -g nwjs2
 ```
 # Usage
 
