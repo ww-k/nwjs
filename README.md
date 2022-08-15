@@ -1,5 +1,3 @@
-# nwjs [![version](https://img.shields.io/npm/v/nwjs.svg)](https://www.npmjs.com/package/nwjs) [![npm](https://img.shields.io/npm/dm/nwjs.svg)](https://www.npmjs.com/package/nwjs)
-
 Inspired by [electron-prebuilt](https://github.com/mafintosh/electron-prebuilt)
 
 You can use `nwjs` as an nw.js version manager, and do things like `nw /your/app/path`
@@ -15,28 +13,31 @@ npm i -g nwjs
 
 ```bash
 # Install a version
-$ nw install 0.12.3
+$ nw install 0.55.0
 
 # Install a SDK version
-$ nw install 0.13.0-rc3-sdk
+$ nw install 0.55.0-sdk
+
+# Mac arm64, install x64
+$ nw install 0.55.0-sdk --arch=x64
+
+# Install by mirror
+$ NWJS_MIRROR=https://registry.npmmirror.com/-/binary/nwjs/ nw install 0.55.0-sdk
+
+# Install by proxy
+$ HTTP_PROXY=http://127.0.0.1:8787 nw install 0.55.0-sdk
 
 # Run nw in cwd or specific any directory
 $ nw .
 
 # Use another cached version
-$ nw use 0.13.0-beta3
+$ nw use 0.55.0
 
 # Use SDK version
-$ nw use 0.13.0-rc3-sdk
+$ nw use 0.55.0-sdk
 
 # List all local cached versions
 $ nw ls
-
-# Use a proxy
-$ http_proxy=http://127.0.0.1:8787 nw install 0.13.0-beta5
-
-# For fish shell users
-$ env http_proxy=http://127.0.0.1:8787 nw install 0.13.0-beta5
 ```
 
 For all available versions to install please use `nw ls-remote`
@@ -78,4 +79,4 @@ const child = spawn(nw)
 
 ## License
 
-MIT &copy; [EGOIST](https://github.com/egoist)
+MIT &copy; [ww-k](https://github.com/ww-k)

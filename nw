@@ -35,6 +35,7 @@ cli
   .command('install <version>')
   .description('Install an nwjs version')
   .alias('i')
+  .option('--arch <arch>', 'specify arch instead os arch')
   .action(install)
 
 cli
